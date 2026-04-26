@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="datepicker/datestyle.css" />
+</head>
+<body>
+<div class="container">
+    <div class="todo-app">
+        <h2>To-Do List <img src="Todo.png"></h2>
+            <div class="date-range-picker">
+                <input type="text" readonly id="start-date" placeholder="Start Date" />
+                <span>—</span>
+                <input type="text" readonly id="end-date" placeholder="End Date" />
+                <div class="calendar hidden" id="calendar"></div>
+            </div>
+
+            <script src="datepicker/datescript.js"></script>
+
+
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your task">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>-->
+        </ul>
+    </div>
+<script src = "script.js"></script>
+</div>
+    </div>
+  </body>
+</html>
