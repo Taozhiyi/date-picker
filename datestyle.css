@@ -1,0 +1,91 @@
+*body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.date-range-picker {
+  position: relative;
+  left:260px;
+  bottom:65px;
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.date-range-picker input {
+  width: 120px;
+  padding: 6px;
+  border: 1px solid #ffc403;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.date-range-picker span {
+  margin: 0 5px;
+}
+
+.calendar {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index:1;
+}
+
+.calendar.hidden {
+  display: none;
+}
+
+.calendar .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar .header button {
+  background:none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 10px;
+}
+
+.calendar .day {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.calendar .day:hover {
+  background: #eee;
+}
+
+.calendar .day.disabled {
+  color: #5f5e5e;
+  pointer-events: none;
+}
+
+.calendar .day.selected,
+.calendar .day.in-range {
+  background: #ffc800;
+  color: #ff0000;
+}
